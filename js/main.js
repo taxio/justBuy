@@ -147,6 +147,19 @@ function calculation(){
     resultList[i]=0;
   }
 
+  //最小個数が1個以上の場合は優先度を無視して、まず最小個数だけを購入リストに追加
+  for(var i=0;i<itemList.length;i++){
+    if(itemList[i][3] > 0){
+      maxPrice = maxPrice - itemList[i][3] * itemList[i][1];
+      resultList[i] = itemList[i][3];
+    }
+  }
+  if(maxPrice<0){
+    maxPrice = maxPrice * (-1);
+    alert("指定の最小個数では" + maxPrice.toString(10) + "円不足します");
+    return;
+  }
+
   //欲張り法
   for(var i=0;i<itemList.length;i++){
     while(maxPrice >= itemList[i][1]){
