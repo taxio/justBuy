@@ -1,9 +1,10 @@
 
-var itemNameList = ["a","b","c","d","e","f","g"];
-var itemPriceList = [10,100,30,160,1000,420,700];
-var itemPriorityList = [1,1,2,2,3,3,1];
-var itemMaxList = [99,"-","-",99,99,99,3];
-var itemMinList = [0,0,0,0,0,0,0];
+var itemNameList = [];
+var itemPriceList = [];
+var itemPriorityList = [];
+var itemMaxList = [];
+var itemMinList = [];
+
 var priorityName = ["A","B","C"];
 var itemList = new Array();
 var resultList = new Array();
