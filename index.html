@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Just Buy</title>
+
+<link href="style/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="inputForm">
+    商品名 : <input type="text" id="inputName" value="">
+    単価 : <input type="text" id="inputPrice" value="">円
+    優先度 :
+    <select id="priority">
+      <option value="1">A</option>
+      <option value="2">B</option>
+      <option value="3">C</option>
+    </select>
+    最大個数 : <input type="text" id="inputMax" value="-">
+    最小個数 : <input type="text" id="inputMin" value="0">
+    <button onclick="registerItem()">登録</button>
+  </div>
+
+  <dvi class="budgetForm">
+    予算 : <input type="text" id="budget" value="">
+    <button onclick="calculation()">計算</button>
+  </dvi>
+
+  <table id="itemTable">
+  </table>
+
+  <p>↓結果↓<a id="download" href="#" onclick="saveResult()">csv形式でダウンロード</a></p>
+
+  <table id="resultTable">
+  </table>
+
+  <script type="text/javascript" src="js/util.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+#itemTable{
+  border-collapse: collapse;
+}
+
+#itemTable td{
+  border: solid 1px;
+	padding: 0.5em;
+}
+
+#resultTable{
+  border-collapse: collapse;
+}
+
+#resultTable td{
+  border: solid 1px;
+	padding: 0.5em;
+}
