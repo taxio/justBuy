@@ -1,9 +1,9 @@
 
-var itemNameList = [];
-var itemPriceList = [];
-var itemPriorityList = [];
-var itemMaxList = [];
-var itemMinList = [];
+var itemNameList = ["a","b","c"];
+var itemPriceList = [120,300,2000];
+var itemPriorityList = [2,1,1];
+var itemMaxList = ["-",5,"-"];
+var itemMinList = [0,0,0];
 
 var priorityName = ["A","B","C"];
 var itemList = new Array();
@@ -208,7 +208,7 @@ function calculation(){
 
 function saveResult(){
   var fileName = 'just_buy_result.csv';
-  var csvString = "商品名\t単価\t個数\t金額\n";
+  var csvString = "商品名,単価,個数,金額\n";
 
   if(itemList.length <= 0){
     alert("計算結果がありません");
@@ -219,12 +219,12 @@ function saveResult(){
     if(resultList[i] == 0){
       continue;
     }
-    csvString += itemList[i][0]  + "\t";
-    csvString += itemList[i][1]  + "\t";
-    csvString += resultList[i]   + "\t";
+    csvString += itemList[i][0]  + ",";
+    csvString += itemList[i][1]  + ",";
+    csvString += resultList[i]   + ",";
     csvString += (itemList[i][1] * resultList[i]).toString(10) + "\n";
   }
-  csvString += "残金" + "\t" + "-" + "\t" + "-" + "\t" + maxPrice.toString(10) + "\n";
+  csvString += "残金" + "," + "-" + "," + "-" + "," + maxPrice.toString(10) + "\n";
 
   var bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
   var blob = new Blob([bom, csvString], { type: 'text/csv' });
