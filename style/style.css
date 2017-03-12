@@ -1,9 +1,30 @@
+/*GLOBAL*/
+body{
+	color: #484848;
+}
+.container{
+	max-width: 999px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+}
+table{
+	text-align: center;
+	width: 100%;
+
+}
+td{
+	border: solid 1px #ccc;
+}
+tr:first-of-type{
+	background-color: #f1f1f1
+}
+/*ORIGINAL STYLES*/
 #itemTable{
   border-collapse: collapse;
 }
 
 #itemTable td{
-  border: solid 1px;
 	padding: 0.5em;
 }
 
@@ -12,6 +33,28 @@
 }
 
 #resultTable td{
-  border: solid 1px;
 	padding: 0.5em;
+}
+.container{
+	max-width: 999px;
+}
+/*STYLIZING FORM*/
+.form-item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 15px;
+	padding: 0 5px;
+	font-size: 0.9em;
+}
+.form-item input[type="text"]{
+	border: solid 1px #ccc;
+	padding: 5px;
+	transition: all 0.4s;
+}
+.form-item input[type="text"]:focus{
+	outline: none;
+	border: solid 1px #3240a9;
+}
+.cnt{
+	text-align: center;
 }
