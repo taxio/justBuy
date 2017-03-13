@@ -42,16 +42,19 @@
           予算 : <input type="text" id="budget" value="">
           <button onclick="calculation()">計算</button>
         </dvi>
+        <a id="download" href="#" onclick="saveResult()">download csv</a>
       </div>
     </div>
 
-    <table id="itemTable">
-    </table>
+    <div id="left-table">
+      <table id="itemTable">
+      </table>
+    </div>
 
-    <p class="cnt">↓結果↓<a id="download" href="#" onclick="saveResult()">csv形式でダウンロード</a></p>
-
-    <table id="resultTable">
-    </table>
+    <div id="right-table">
+      <table id="resultTable">
+      </table>
+    </div>
 </div>
   <script type="text/javascript" src="js/util.js"></script>
   <script type="text/javascript" src="js/main.js"></script>

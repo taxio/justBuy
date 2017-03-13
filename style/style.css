@@ -19,9 +19,18 @@ td{
 tr:first-of-type{
 	background-color: #f1f1f1
 }
+#right-table{
+	width: 50%;
+	float: right;
+}
+#left-table{
+	width: 50%;
+	float: left;
+}
 /*ORIGINAL STYLES*/
 #itemTable{
   border-collapse: collapse;
+	float:left;
 }
 
 #itemTable td{
